@@ -40,8 +40,8 @@
 
 ### ✉️ تواصل معي
 أنا مهتم بالتعاون في مشاريع جديدة أو فرص عمل. لا تتردد في التواصل معي.
-* **البريد الإلكتروني:** `<omer11.oo13@gmail.com>`
-* **LinkedIn:** `[https://www.linkedin.com/in/omer-al-dabbagh-5638a328b?utm_source=share_via&utm_content=profile&utm_medium=member_android]`
+* **البريد الإلكتروني:** `omer11.oo13@gmail.com`
+* **LinkedIn:** `https://www.linkedin.com/in/omer-al-dabbagh-5638a328b?utm_source=share_via&utm_content=profile&utm_medium=member_android`
 
 
 ---
