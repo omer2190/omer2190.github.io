@@ -1,58 +1,90 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
   // --- DATA: Define Your Projects Here ---
   const projects = [
     {
-      id: 'p1',
-      title: 'نظام إدارة شركات الحج والعمرة',
-      year: '2024',
-      description: 'حل مكتبي متكامل لإدارة الرحلات، الحجوزات، الفواتير والتقارير. يوفّر لوحة تحكم ومكاتب خلفية لإدارة العمليات.',
-      tags: ['Flutter', 'Node.js', 'MongoDB', 'REST APIs'],
+      id: "p5",
+      title: "تطبيق كوين",
+      year: "2025",
+      description:
+        "تطبيق تواصل اجتماعي يحتوي على منشورات وتعليقات ويجمع ما بين تفاعل المستخدمين من نشر قصصهم و المحادذات الجماعية او الفردية كما يحتوي على نظام متجر مصغر وبنظام النقد او الاقساط, كما يمكن تجربة التطبيق عبر التحميل من المتجر من الرابط \nhttps://play.google.com/store/apps/details?id=com.hamza2190.koin.or&pcampaignid=web_share",
+      tags: ["Flutter", "Node.js", "MongoDB", "REST APIs"],
+      imageCount: 27, // Number of images in assets/projects/p1
+    },
+    {
+      id: "p6",
+      title: "نظام إدارة تشغيل الفنادق",
+      year: "2025",
+      description:
+        "برنامج فندقي خاص لشركة الايوان لتشغيل الفنادق السعودية يعمل على ادارة حجز الغرف وصيانتها",
+      tags: ["Flutter", "Node.js", "MongoDB", "REST APIs"],
+      imageCount: 11, // Number of images in assets/projects/p1
+    },
+    {
+      id: "p1",
+      title: "نظام إدارة شركات المدينة المنورة للحج والعمرة",
+      year: "2024",
+      description:
+        "حل مكتبي متكامل لإدارة الرحلات، الحجوزات، الفواتير والتقارير. يوفّر لوحة تحكم ومكاتب خلفية لإدارة العمليات.",
+      tags: ["Flutter", "Node.js", "MongoDB", "REST APIs"],
       imageCount: 17, // Number of images in assets/projects/p1
     },
     {
-      id: 'p4', // Corrected from p2 to p4
-      title: 'تطبيق البارون',
-      year: '2023',
-      description: 'منصة تواصل ومكافآت مع تجربة مستخدم بسيطة ونظام نقاط متطور ومكافآت قابلة للاسترداد.',
-      tags: ['Flutter', 'Express.js', 'Firebase'],
+      id: "p4", // Corrected from p2 to p4
+      title: "تطبيق البارون",
+      year: "2023",
+      description:
+        "منصة تواصل ومكافآت مع تجربة مستخدم بسيطة ونظام نقاط متطور ومكافآت قابلة للاسترداد.",
+      tags: ["Flutter", "Express.js", "Nodejs", "MongoDB", "REST APIs"],
       imageCount: 26, // Number of images in assets/projects/p4
     },
     {
-      id: 'p2', // Corrected from p3 to p2
-      title: 'ROZ NET — نظام إدارة مزودي الإنترنت',
-      year: '2022',
-      description: 'نظام SaaS لإدارة الاشتراكات والفوترة ومراقبة الأبراج الشبكية مع تقارير تحليلية وديناميكية.',
-      tags: ['Flutter', 'MongoDB', 'APIs'],
+      id: "p2", // Corrected from p3 to p2
+      title: "ROZ NET — نظام إدارة مزودي الإنترنت",
+      year: "2022",
+      description:
+        "نظام SaaS لإدارة الاشتراكات والفوترة ومراقبة الأبراج الشبكية مع تقارير تحليلية وديناميكية.",
+      tags: [
+        "Flutter",
+        "MongoDB",
+        "APIs",
+        "REST APIs",
+        "Express.js",
+        "Node.js",
+      ],
       imageCount: 33, // Number of images in assets/projects/p2
     },
     {
-      id: 'p3',
-      title: 'مشروع تجريبي 4',
-      year: '2022',
-      description: 'وصف مختصر للمشروع الرابع يوضح الهدف الرئيسي والتقنيات المستخدمة فيه.',
-      tags: ['React', 'CSS', 'HTML5'],
+      id: "p3",
+      title: "روز نت المشتركين",
+      year: "2023",
+      description: "هذا التطبيق المخصص للمشتركين وهو استكمال للتطبيق الاول",
+      tags: ["Flutter", "API"],
       imageCount: 8, // Number of images in assets/projects/p3
     },
     // To add a new project, just copy the object above and change the details.
   ];
 
   // --- RENDER PROJECTS ---
-  const projectsGrid = document.getElementById('projects-grid');
+  const projectsGrid = document.getElementById("projects-grid");
   if (projectsGrid) {
-    projectsGrid.innerHTML = projects.map(p => createProjectCard(p)).join('');
+    projectsGrid.innerHTML = projects.map((p) => createProjectCard(p)).join("");
   }
 
   function createProjectCard(project) {
-    const imagesHtml = Array.from({ length: project.imageCount }, (_, i) => `
+    const imagesHtml = Array.from(
+      { length: project.imageCount },
+      (_, i) => `
       <img 
         src="assets/projects/${project.id}/p (${i + 1}).png" 
         alt="لقطة شاشة ${i + 1} من مشروع ${project.title}" 
         loading="lazy" 
       />
-    `).join('');
+    `
+    ).join("");
 
-    const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+    const tagsHtml = project.tags
+      .map((tag) => `<span class="tag">${tag}</span>`)
+      .join("");
 
     return `
       <article class="project-card" role="listitem" aria-labelledby="p-${project.id}-title">
@@ -76,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
 
   // Use event delegation for dynamically added images
-  projectsGrid.addEventListener('click', (e) => {
-    if (e.target.tagName === 'IMG') {
+  projectsGrid.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") {
       openModalFor(e.target);
     }
   });
@@ -85,10 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModalFor(imgEl) {
     const galleryContainer = imgEl.closest(".project-images");
     if (!galleryContainer) return;
-    
+
     currentGallery = Array.from(galleryContainer.querySelectorAll("img"));
     currentIndex = currentGallery.indexOf(imgEl);
-    
+
     showAt(currentIndex);
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
@@ -120,7 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
     showAt(currentIndex + 1);
   });
 
-  document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+  document
+    .getElementById("modal-close-btn")
+    .addEventListener("click", closeModal);
 
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
