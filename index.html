@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة أعمال عمر - مطور برمجيات</title>
+    <title>عمر - مطور حلول برمجية</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
         :root {
-            --primary-color: #2c3e50; /* لون أزرق داكن */
-            --secondary-color: #3498db; /* لون أزرق فاتح */
-            --accent-color: #e74c3c; /* لون أحمر */
-            --background-color: #f4f6f9; /* لون رمادي فاتح جدًا */
+            --primary-color: #2c3e50; /* أزرق داكن */
+            --secondary-color: #3498db; /* أزرق فاتح */
+            --accent-color: #e74c3c; /* أحمر */
+            --background-color: #f4f6f9; /* رمادي فاتح */
             --text-color: #333;
             --light-text-color: #ecf0f1;
         }
@@ -23,57 +22,59 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
-            text-align: right; /* محاذاة النص لليمين */
+            direction: rtl;
+            text-align: right;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
         }
-
+        
         header {
             background-color: var(--primary-color);
             color: var(--light-text-color);
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
             border-bottom: 5px solid var(--secondary-color);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 400;
             margin-top: 10px;
         }
 
         .section {
             background-color: #fff;
-            padding: 30px;
-            margin: 20px 0;
+            padding: 40px;
+            margin: 30px 0;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .section h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--primary-color);
             border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
         }
-
+        
         .project-card {
+            display: flex;
+            flex-direction: column;
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -85,6 +86,11 @@
         .project-card h3 {
             color: var(--secondary-color);
             margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            font-size: 1.1rem;
         }
 
         .project-card .tech-list {
@@ -93,27 +99,16 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .project-card .tech-list li {
             background-color: var(--secondary-color);
             color: #fff;
-            padding: 5px 10px;
+            padding: 5px 12px;
             border-radius: 5px;
             font-size: 0.9rem;
-        }
-        
-        .project-card a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 700;
-            margin-top: 10px;
-            display: inline-block;
-        }
-
-        .project-card a:hover {
-            text-decoration: underline;
+            font-weight: bold;
         }
 
         .contact-links {
@@ -121,16 +116,17 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .contact-links a {
             background-color: var(--secondary-color);
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            font-weight: bold;
         }
         
         .contact-links a:hover {
@@ -139,8 +135,9 @@
 
         footer {
             text-align: center;
-            padding: 20px 0;
-            color: var(--text-color);
+            padding: 25px 0;
+            color: #777;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
@@ -149,70 +146,68 @@
 <header>
     <div class="container">
         <h1>مرحباً، أنا عمر! 👋</h1>
-        <p>مطور برمجيات متخصص في <span style="color: var(--accent-color);">تطوير تطبيقات الموبايل باستخدام Flutter</span></p>
+        <p>مطور حلول برمجية مبتكرة لتطبيقات الموبايل وأنظمة الأعمال</p>
     </div>
 </header>
 
 <div class="container">
     <section class="section">
-        <h2>نبذة عني 🚀</h2>
+        <h2>من أنا؟ 🚀</h2>
         <p>
-            أنا مطور برمجيات شغوف بالبناء والابتكار. لدي خبرة في تطوير <span style="font-weight: bold;">تطبيقات الموبايل عالية الجودة</span>. أُركز حاليًا على بناء حلول قوية وفعّالة باستخدام <span style="font-weight: bold;">Dart و Flutter</span>، مع خبرة في بناء الواجهات الخلفية باستخدام <span style="font-weight: bold;">Node.js و Express</span>.
+            أنا **عمر**، مطور برمجيات شغوف بتحويل الأفكار المعقدة إلى **حلول برمجية عملية وفعّالة**. أمتلك خبرة واسعة في بناء تطبيقات قوية ومصقولة المظهر باستخدام **Flutter**، مع التركيز على تطوير الواجهات الخلفية (Backend) لتوفير بنية تحتية آمنة وقابلة للتوسع.
         </p>
     </section>
 
     <section class="section">
-        <h2>معرض أعمالي 💡</h2>
+        <h2>أعمالي المميزة 💡</h2>
         <div class="project-card">
-            <h3>تطبيق إدارة المهام اليومية</h3>
+            <h3>نظام إدارة شركات الحج والعمرة</h3>
             <p>
-                تطبيق موبايل مصمم لمساعدة المستخدمين على تنظيم مهامهم اليومية بكفاءة. يتميز بواجهة مستخدم حديثة وتجربة استخدام سلسة.
+                **وصف تجاري:** حل مكتبي متكامل يمنح شركات الحج والعمرة السيطرة الكاملة على عملياتها. من إدارة الرحلات والوكلاء إلى تتبع الجوانب المالية والمحاسبية، يضمن النظام أعلى مستويات الدقة والكفاءة.
             </p>
-            <ul class="tech-list">
-                <li>Flutter</li>
-                <li>Dart</li>
-                <li>Firebase</li>
-            </ul>
-            <a href="https://github.com/omar/task-manager" target="_blank">زيارة مستودع GitHub</a>
+            <p>
+                **وصف فني:** تم بناء هذا التطبيق المكتبي باستخدام **Flutter** مع واجهة خلفية قوية تعتمد على **Node.js و MongoDB**، مما يوفر أداءً ممتازًا وتزامنًا دقيقًا للبيانات.
+            </p>
         </div>
+        
         <div class="project-card">
-            <h3>منصة التجارة الإلكترونية</h3>
+            <h3>تطبيق البارون</h3>
             <p>
-                نظام تجارة إلكترونية كامل يشمل الواجهة الأمامية (Frontend) والواجهة الخلفية (Backend) مع ميزات سلة التسوق والمدفوعات الآمنة.
+                **وصف تجاري:** منصة تجمع بين التواصل المجتمعي ونظام مكافآت مبتكر. يتيح التطبيق للمستخدمين التفاعل وكسب نقاط قابلة للاستبدال بمنتجات حقيقية، مما يخلق بيئة مجزية ومحفزة.
             </p>
-            <ul class="tech-list">
-                <li>Flutter</li>
-                <li>Dart</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-            </ul>
-            <a href="https://github.com/omar/ecommerce-platform" target="_blank">زيارة مستودع GitHub</a>
+            <p>
+                **وصف فني:** تم تطوير هذا التطبيق الكامل باستخدام **Flutter** للواجهة الأمامية و **Node.js مع Express** للواجهة الخلفية، مما يعكس القدرة على دمج مفاهيم متعددة في منصة واحدة.
+            </p>
+        </div>
+        
+        <div class="project-card">
+            <h3>نظام روز نت (ROZ NET)</h3>
+            <p>
+                **وصف تجاري:** نظام إداري (SAS) مصمم خصيصًا لشركات الإنترنت التي تعمل بنظام الأبراج. يوفر حلولًا شاملة لإدارة المشتركين، الفواتير، والتقارير، مما يقلل من الأعباء الإدارية ويزيد الكفاءة التشغيلية.
+            </p>
+            <p>
+                **وصف فني:** تم بناء لوحة التحكم باستخدام **Flutter**، وتتكامل مع نظام إدارة خارجي عبر **RESTful APIs**، مما يوضح مهاراتي في بناء أنظمة معقدة ومترابطة.
+            </p>
         </div>
     </section>
 
     <section class="section">
-        <h2>مهاراتي 🛠️</h2>
-        <p>
-            أمتلك خبرة واسعة في التقنيات التالية:
-        </p>
+        <h2>خبراتي التقنية 🛠️</h2>
         <ul class="tech-list">
             <li>Flutter</li>
             <li>Dart</li>
             <li>Node.js</li>
-            <li>Express</li>
-            <li>RESTful APIs</li>
-            <li>Git</li>
-            <li>GitHub</li>
+            <li>Express.js</li>
             <li>MongoDB</li>
-            <li>Firebase</li>
+            <li>RESTful APIs</li>
+            <li>Git & GitHub</li>
         </ul>
     </section>
 
     <section class="section">
         <h2>تواصل معي ✉️</h2>
         <p style="text-align: center;">
-            أنا مهتم دائمًا بالتعاون في مشاريع جديدة. لا تتردد في التواصل معي.
+            هل لديك فكرة مشروع؟ دعنا نحولها إلى واقع! أنا متاح لمناقشة فرص التعاون.
         </p>
         <div class="contact-links">
             <a href="mailto:your-email@example.com">البريد الإلكتروني</a>
