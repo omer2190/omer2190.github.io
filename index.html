@@ -1,119 +1,534 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>عمر — مطور حلول برمجية</title>
+    <title data-i18n="page-title">عمر الدباغ — مطور حلول برمجية احترافية</title>
     <meta
       name="description"
-      content="معرض أعمال عمر - مطور تطبيقات موبايل وأنظمة أعمال."
+      content="معرض أعمال عمر الدباغ - مطور تطبيقات موبايل وأنظمة أعمال متكاملة. متخصص في Flutter و Node.js"
+      data-i18n-attr="content:page-description"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- HERO -->
-      <header class="hero" aria-labelledby="hero-title">
-        <div class="hero-deco" aria-hidden="true"></div>
-        <div class="hero-inner" role="banner">
-          <div class="hero-left">
-            <h1 id="hero-title">من فكرة الى واقع.</h1>
-            <p>
-              أنا عمر — مصمم ومطور حلول موبايل وأنظمة أعمال، أُحب تصميم واجهات
-              متجددة وتجربة مستخدم متقنة. هذه بعض أعمالي المميزة.
+    <!-- LOADING SCREEN -->
+    <div class="loader-wrapper">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text" data-i18n="loader-text">عمر الدباغ</div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-text" data-i18n="nav-logo">عمر</span>
+          <span class="logo-dot">.</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="nav-link active" data-i18n="nav-home"
+            >الرئيسية</a
+          >
+          <a href="#about" class="nav-link" data-i18n="nav-about">من أنا</a>
+          <a href="#experience" class="nav-link" data-i18n="nav-experience"
+            >الخبرات</a
+          >
+          <a href="#projects" class="nav-link" data-i18n="nav-projects"
+            >المشاريع</a
+          >
+          <a href="#contact" class="nav-link" data-i18n="nav-contact"
+            >تواصل معي</a
+          >
+        </div>
+        <div class="nav-actions">
+          <!-- <a
+            href="admin/"
+            class="admin-link"
+            title="لوحة التحكم"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              height: 40px;
+              color: inherit;
+              text-decoration: none;
+              margin-left: 10px;
+            "
+          >
+            <i class="fas fa-lock"></i>
+          </a> -->
+          <button class="lang-toggle" id="langToggle" aria-label="تغيير اللغة">
+            <i class="fas fa-globe"></i>
+            <span class="lang-text" data-i18n="lang-switch">EN</span>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-badge animate-fade-up">
+              <i class="fas fa-code"></i>
+              <span data-i18n="hero-badge">مطور حلول برمجية</span>
+            </div>
+            <h1 class="hero-title animate-fade-up">
+              <span data-i18n="hero-title-from">من</span>
+              <span class="gradient-text" data-i18n="hero-title-idea"
+                >فكرة</span
+              >
+              <br /><span data-i18n="hero-title-to">إلى</span>
+              <span class="gradient-text" data-i18n="hero-title-reality"
+                >واقع رقمي</span
+              >
+            </h1>
+            <p
+              class="hero-description animate-fade-up"
+              data-i18n="hero-description"
+            >
+              أنا <strong>عمر الدباغ</strong>، مطور برمجيات متخصص في بناء
+              تطبيقات الموبايل وأنظمة الأعمال المتكاملة. أحول أفكارك إلى حلول
+              تقنية احترافية مع تجربة مستخدم استثنائية وأداء متميز.
             </p>
-            <div class="hero-meta">
-              <span class="pill">Flutter • Node.js</span>
-              <span class="pill">تصميم واجهات • حلول SaaS</span>
-              <span class="pill">Git • REST APIs</span>
+            <div class="hero-buttons animate-fade-up">
+              <a href="#projects" class="btn btn-primary">
+                <span data-i18n="hero-btn-projects">استعرض أعمالي</span>
+                <i class="fas fa-arrow-down"></i>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span data-i18n="hero-btn-contact">تواصل معي</span>
+                <i class="fas fa-paper-plane"></i>
+              </a>
+            </div>
+            <div class="hero-stats animate-fade-up">
+              <div class="stat-item">
+                <div class="stat-number">6+</div>
+                <div class="stat-label" data-i18n="stat-projects">
+                  مشاريع منجزة
+                </div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">6+</div>
+                <div class="stat-label" data-i18n="stat-experience">
+                  سنوات خبرة
+                </div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label" data-i18n="stat-satisfaction">
+                  رضا العملاء
+                </div>
+              </div>
             </div>
           </div>
+          <div class="hero-visual animate-fade-up">
+            <div class="code-window">
+              <div class="code-header">
+                <div class="code-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="code-title">portfolio.dart</div>
+              </div>
+              <div class="code-body">
+                <pre><code class="code-line"><span class="code-keyword">class</span> <span class="code-class">Developer</span> {</code></pre>
+                <pre><code class="code-line">  <span class="code-keyword">final</span> String name = <span class="code-string" id="code-name">'عمر الدباغ'</span>;</code></pre>
+                <pre><code class="code-line">  <span class="code-keyword">final</span> List skills = [</code></pre>
+                <pre><code class="code-line">    <span class="code-string">'Flutter'</span>,</code></pre>
+                <pre><code class="code-line">    <span class="code-string">'Node.js'</span>,</code></pre>
+                <pre><code class="code-line">    <span class="code-string">'MongoDB'</span>,</code></pre>
+                <pre><code class="code-line">  ];</code></pre>
+                <pre><code class="code-line">}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <p data-i18n="scroll-down">اسحب للأسفل</p>
+      </div>
+    </section>
 
-          <!-- <div class="hero-right" aria-hidden="true">
-            <div class="device-frame" role="img" aria-label="لقطات من المشاريع">
-              <div class="device-screenshot">
-                <div style="text-align: center">
-                  <div style="font-size: 0.95rem; color: var(--muted)">
-                    عرض حي لتصميمات المشاريع
-                  </div>
-                  <div
-                    style="margin-top: 10px; font-weight: 700; color: #e8f0ff"
-                  >
-                    واجهة مستخدم تفاعلية
+    <!-- ABOUT SECTION -->
+    <section class="about-section section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge animate-on-scroll" data-i18n="about-badge"
+            >نبذة عني</span
+          >
+          <h2 class="section-title animate-on-scroll" data-i18n="about-title">
+            من أنا؟
+          </h2>
+          <p
+            class="section-subtitle animate-on-scroll"
+            data-i18n="about-subtitle"
+          >
+            شغفي هو تحويل التحديات إلى حلول رقمية مبتكرة
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-text animate-on-scroll">
+            <div class="about-card">
+              <div class="card-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3 data-i18n="about-card1-title">مطور برمجيات محترف</h3>
+              <p data-i18n="about-card1-text">
+                أنا <strong>عمر الدباغ</strong>، مطور برمجيات متخصص في بناء
+                تطبيقات الموبايل باستخدام <strong>Flutter</strong> وتطوير
+                الخدمات الخلفية بـ<strong>Node.js</strong>. أمتلك خبرة واسعة في
+                تصميم وتطوير أنظمة أعمال متكاملة وتطبيقات تواصل اجتماعي معقدة.
+              </p>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3 data-i18n="about-card2-title">شغوف بالابتكار</h3>
+              <p data-i18n="about-card2-text">
+                أؤمن بأن كل مشروع هو فرصة لخلق شيء استثنائي. أركز على تقديم حلول
+                عملية ومبتكرة تجمع بين التصميم الأنيق والأداء العالي وتجربة
+                المستخدم المتميزة. كل سطر كود أكتبه يهدف إلى تحقيق التميز
+                والجودة.
+              </p>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 data-i18n="about-card3-title">متابع للتطور التقني</h3>
+              <p data-i18n="about-card3-text">
+                أواكب أحدث التقنيات والأدوات في عالم البرمجة وأطبقها في مشاريعي.
+                من تطوير تطبيقات تواصل اجتماعي متقدمة إلى بناء أنظمة إدارة فنادق
+                وحج وعمرة، أسعى دائمًا لتقديم حلول تقنية تواكب العصر وتتجاوز
+                التوقعات.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="experience-section section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge animate-on-scroll" data-i18n="exp-badge"
+            >خبراتي</span
+          >
+          <h2 class="section-title animate-on-scroll" data-i18n="exp-title">
+            الخبرات والمهارات
+          </h2>
+          <p
+            class="section-subtitle animate-on-scroll"
+            data-i18n="exp-subtitle"
+          >
+            أدوات وتقنيات أستخدمها لبناء حلول برمجية احترافية
+          </p>
+        </div>
+        <div class="skills-container">
+          <div class="skill-category animate-on-scroll">
+            <div class="category-header">
+              <i class="fas fa-mobile-alt"></i>
+              <h3 data-i18n="skill-mobile">تطوير تطبيقات الموبايل</h3>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-flutter"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Flutter</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="95"></div>
                   </div>
                 </div>
               </div>
-              <div class="ghost-buttons">
-                <button class="ghost">معاينة</button>
-                <button class="ghost">تفاصيل</button>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-dart"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Dart</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90"></div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div> -->
-        </div>
-      </header>
+          </div>
 
-      <!-- ABOUT -->
-      <section class="card" id="about">
-        <h2>من أنا؟</h2>
-        <p class="muted-small">
-          أنا <strong>عمر</strong>، مطور برمجيات أقدّم حلولاً عملية ومبتكرة
-          لتطبيقات الموبايل وأنظمة الأعمال. أركز على سهولة الاستخدام، الأداء،
-          وتجربة مستخدم مميزة. أدعم التكامل عبر RESTful APIs وقواعد بيانات
-          سحابية.
-        </p>
-      </section>
+          <div class="skill-category animate-on-scroll">
+            <div class="category-header">
+              <i class="fas fa-server"></i>
+              <h3 data-i18n="skill-backend">تطوير Backend</h3>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-node-js"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Node.js</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Express.js</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="88"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>MongoDB</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fas fa-plug"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>REST APIs</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="92"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- PROJECTS -->
-      <section class="card" id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">أعمالي المميزة</h2>
-
-        <!-- Project cards will be dynamically inserted here by script.js -->
-        <div class="projects-grid" id="projects-grid" role="list"></div>
-
-        <div class="cta-row">
-          <div class="muted-small">هل لديك مشروع تريد تصميمه؟</div>
-          <div class="contact-links">
-            <a class="btn-primary" href="mailto:omer11.oo13@gmail.com"
-              >تواصل معي</a
-            >
-            <a
-              class="btn-ghost"
-              href="https://www.linkedin.com/in/omer-al-dabbagh-5638a328b"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <a
-              class="btn-ghost"
-              href="https://github.com/omer2190"
-              target="_blank"
-              >GitHub</a
-            >
+          <div class="skill-category animate-on-scroll">
+            <div class="category-header">
+              <i class="fas fa-tools"></i>
+              <h3 data-i18n="skill-tools">أدوات ومنصات</h3>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-git-alt"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Git & GitHub</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="87"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-figma"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>UI/UX Design</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SKILLS -->
-      <section class="card" id="skills" aria-labelledby="skills-title">
-        <h2 id="skills-title">خبراتي التقنية</h2>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap">
-          <span class="pill">Flutter</span>
-          <span class="pill">Dart</span>
-          <span class="pill">Node.js</span>
-          <span class="pill">Express</span>
-          <span class="pill">MongoDB</span>
-          <span class="pill">REST APIs</span>
-          <span class="pill">Git & GitHub</span>
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span
+            class="section-badge animate-on-scroll"
+            data-i18n="projects-badge"
+            >معرض الأعمال</span
+          >
+          <h2
+            class="section-title animate-on-scroll"
+            data-i18n="projects-title"
+          >
+            مشاريعي المميزة
+          </h2>
+          <p
+            class="section-subtitle animate-on-scroll"
+            data-i18n="projects-subtitle"
+          >
+            مجموعة من أفضل المشاريع التي عملت عليها
+          </p>
         </div>
-      </section>
 
-      <footer>
-        &copy; <span id="year"></span> — omer2190 — جميع الحقوق محفوظة.
-      </footer>
-    </div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span
+            class="section-badge animate-on-scroll"
+            data-i18n="contact-badge"
+            >تواصل معي</span
+          >
+          <h2 class="section-title animate-on-scroll" data-i18n="contact-title">
+            لنبدأ مشروعك القادم
+          </h2>
+          <p
+            class="section-subtitle animate-on-scroll"
+            data-i18n="contact-subtitle"
+          >
+            لديك فكرة مشروع؟ دعنا نحولها إلى واقع
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info animate-on-scroll">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3 data-i18n="contact-email">البريد الإلكتروني</h3>
+              <a href="mailto:omer11.oo13@gmail.com">omer11.oo13@gmail.com</a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <h3>LinkedIn</h3>
+              <a
+                href="https://www.linkedin.com/in/omer-al-dabbagh-5638a328b"
+                target="_blank"
+                data-i18n="contact-linkedin-name"
+                >عمر الدباغ</a
+              >
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <h3>GitHub</h3>
+              <a href="https://github.com/omer2190" target="_blank"
+                >@omer2190</a
+              >
+            </div>
+          </div>
+          <div class="contact-cta animate-on-scroll">
+            <div class="cta-box">
+              <h3 data-i18n="contact-cta-title">هل لديك مشروع تريد تنفيذه؟</h3>
+              <p data-i18n="contact-cta-text">
+                أنا جاهز للاستماع إلى فكرتك ومساعدتك في تحويلها إلى واقع
+              </p>
+              <a
+                href="mailto:omer11.oo13@gmail.com"
+                class="btn btn-primary btn-large"
+              >
+                <span data-i18n="contact-cta-btn">ابدأ محادثة الآن</span>
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-text" data-i18n="footer-name">عمر الدباغ</span>
+              <span class="logo-dot">.</span>
+            </div>
+            <p data-i18n="footer-tagline">مطور حلول برمجية احترافية</p>
+          </div>
+          <div class="footer-links">
+            <a href="#home" data-i18n="nav-home">الرئيسية</a>
+            <a href="#about" data-i18n="nav-about">من أنا</a>
+            <a href="#experience" data-i18n="nav-experience">الخبرات</a>
+            <a href="#projects" data-i18n="nav-projects">المشاريع</a>
+            <a href="#contact" data-i18n="nav-contact">تواصل معي</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://github.com/omer2190"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/omer-al-dabbagh-5638a328b"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:omer11.oo13@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="year"></span>
+            <span data-i18n="footer-copyright"
+              >عمر الدباغ - جميع الحقوق محفوظة</span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="العودة للأعلى">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- MODAL VIEWER -->
     <div
@@ -124,15 +539,22 @@
       aria-hidden="true"
     >
       <div class="viewer" role="document">
-        <button id="modal-close-btn" class="close" aria-label="إغلاق">✕</button>
+        <button id="modal-close-btn" class="close" aria-label="إغلاق">
+          <i class="fas fa-times"></i>
+        </button>
         <div class="nav">
-          <button id="prevBtn" aria-label="السابق">‹</button>
-          <button id="nextBtn" aria-label="التالي">›</button>
+          <button id="prevBtn" aria-label="السابق">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button id="nextBtn" aria-label="التالي">
+            <i class="fas fa-chevron-left"></i>
+          </button>
         </div>
         <img id="viewerImg" class="viewer-img" src="" alt="" />
       </div>
     </div>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
