@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title id="page-title">تفاصيل المشروع — عمر الدباغ</title>
+    <meta name="description" content="تفاصيل المشروع الكاملة" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/project-overlay.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-code"></i>
+          <span data-i18n="logo-text">عمر الدباغ</span>
+        </a>
+
+        <button id="langToggle" class="lang-toggle" aria-label="تبديل اللغة">
+          <i class="fas fa-language"></i>
+          <span class="lang-text">EN</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Project Detail Content -->
+    <div class="project-detail-page">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">
+          <i class="fas fa-arrow-right"></i>
+          <span data-i18n="back-to-projects">العودة للمشاريع</span>
+        </a>
+
+        <div class="project-detail-content">
+          <header class="detail-header">
+            <div class="detail-meta">
+              <span class="detail-year" id="detail-year"></span>
+              <h1 class="detail-title" id="detail-title"></h1>
+              <div class="detail-tags" id="detail-tags"></div>
+            </div>
+
+            <a
+              href="#"
+              id="detail-link"
+              class="detail-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="display: none"
+            >
+              <span data-i18n="visit-project">زيارة المشروع</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </header>
+
+          <div class="detail-gallery-main" id="detail-gallery-main">
+            <!-- Main Image/Slider -->
+          </div>
+
+          <div class="detail-body">
+            <div class="detail-desc-short" id="detail-desc-short"></div>
+            <div class="detail-desc-full" id="detail-desc-full"></div>
+
+            <div class="gallery-thumbs" id="detail-gallery-thumbs">
+              <!-- Thumbnails -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span>
+          <span data-i18n="copyright">عمر الدباغ. جميع الحقوق محفوظة.</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Scripts -->
+    <script src="assets/js/utils/translations.js"></script>
+    <script type="module" src="assets/js/project-detail.js"></script>
+  </body>
+</html>
